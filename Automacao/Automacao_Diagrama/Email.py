@@ -13,8 +13,8 @@ outlook = win32com.client.Dispatch('Outlook.Application')
 email = outlook.CreateItem(0)
 
 # Configurar as informações do e-mail
-email.To = "maiara03carvalho@gmail.com; jadsonraphae2016l@gmail.com"
-#email.To = "jadsonraphae2016l@gmail.com"
+email.To = "example@email.com"
+#email.To = "example@email.com"
 email.Subject = "Envio de Dados para Construção do Diagrama de Controle"
 email.HTMLBody = f"""
 <p>Prezado(a),</p>

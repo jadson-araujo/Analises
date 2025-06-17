@@ -12,8 +12,6 @@ library(openxlsx)
 
 DENGON <- import("DENGON.dbf")
 
-DIAGRAMA <- import("Diagrama 2025.xlsx")
-
 # Análise da base de dados de Dengue
 # ----------------------------------
 # Criando bases de apoio

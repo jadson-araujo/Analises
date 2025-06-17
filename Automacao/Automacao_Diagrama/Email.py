@@ -1,6 +1,11 @@
 import win32com.client
 import os
 
+with open("situacao.txt", "r") as file:
+    situacao = file.read().strip()
+with open("ultima_semana.txt", "r") as file:
+    ultima_semana = file.read().strip()
+
 # Criar a integração com o Outlook
 outlook = win32com.client.Dispatch('Outlook.Application')
 
@@ -8,17 +13,26 @@ outlook = win32com.client.Dispatch('Outlook.Application')
 email = outlook.CreateItem(0)
 
 # Configurar as informações do e-mail
-email.To = "exemplo@gmail.com"
-email.Subject = "E-mail automático do Python"
+email.To = "maiara03carvalho@gmail.com; jadsonraphae2016l@gmail.com"
+#email.To = "jadsonraphae2016l@gmail.com"
+email.Subject = "Envio de Dados para Construção do Diagrama de Controle"
 email.HTMLBody = f"""
-<p>Teste Diagrama</p>
+<p>Prezado(a),</p>
 
-<p>Abs,</p>
-<p>Código Python</p>
+<p>Gostaria de informar que, referente à semana {ultima_semana}, a situação atual indica que {situacao}.</p>
+
+<p>Em anexo, seguem os dados necessários para a construção do diagrama de controle.</p>
+
+<p>Este e-mail foi enviado automaticamente.</p>
+
+
+<p>Atenciosamente,</p>
+<p>Jadson Raphael Silva de Araujo</p>
 """
 
+
 # Caminho do anexo
-anexo = r"caminho para o arquivo"
+anexo = r"C:\\Users\\Jadson Raphael\\Documents\\Python - Arquivos\\python vscode\\PARA O DIAGRAMA.xlsx"
 
 # Verifica se o anexo existe antes de enviar
 if os.path.exists(anexo):

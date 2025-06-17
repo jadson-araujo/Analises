@@ -14,8 +14,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 class ExportarBase:
     def __init__(self):
         self.SITE_LINK = "https://sinan.saude.gov.br/sinan/login/login.jsf"
-        self.USERNAME = "*********"
-        self.PASSWORD = "*********"
+        self.USERNAME = "raissaemanuely"
+        self.PASSWORD = "raissa1902"
         self.ANO = "2025"
 
         # Obtém a data atual e calcula a semana epidemiológica

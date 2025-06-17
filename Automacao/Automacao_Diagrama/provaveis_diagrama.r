@@ -8,7 +8,7 @@ library(tidyr)
 library(readr)
 library(openxlsx)
 
-#setwd("C:\\Users\\Jadson Raphael\\Documents\\Python - Arquivos\\python vscode\\Automacao_Diagrama")
+#setwd("Caminho para o diretório de trabalho")
 
 DENGON <- import("DENGON.dbf")
 
